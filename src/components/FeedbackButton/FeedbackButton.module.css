@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #34C94B;
+    --secondary-color: #121212;
+    --font-family: "Poppins", sans-serif;
+}
+
+.feedbackButton {
+    border-radius: 10px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+}
+
+.feedbackButton:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
