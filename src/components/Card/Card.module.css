@@ -1,0 +1,35 @@
+.cardContainer {
+  /* width: 159px;
+  height: 232px; */
+}
+
+.card {
+  /* color: white; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* width: 25%; */
+  padding: 0 0 10px 0;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chipContainer {
+  display: flex !important;
+  padding: 10px 0 0 10px;
+}
+
+.followersCount {
+  background-color: #121212 !important;
+  color: white !important;
+  /* font-family: var(--font-family); */
+}
+
+.title {
+  /* color: white; */
+}

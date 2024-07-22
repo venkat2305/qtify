@@ -1,0 +1,22 @@
+.section {
+    padding: 20px;
+}
+
+.sectionTitle{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sectionHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 20px; */
+}
+
+.collapseBtn{
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-weight: bold;
+}

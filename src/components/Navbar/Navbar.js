@@ -2,22 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
-// import Logo from "../Logo/Logo";
-// import Search from "../Search/Search";
+import Logo from "../Logo/Logo";
+import Search from "../Search/Search";
 
 
 function Navbar({ searchData }) {
   return (
     <nav className={styles.navbar}>
-      {/* <Link to="/">
+      {/* <Link to="/"> */}
         <Logo />
-      </Link> */}
-      {/* <Search
+      {/* </Link> */}
+      <Search
         placeholder="Search a song of your choice"
         searchData={searchData}
-      /> */}
+      />
       <FeedbackButton>Give Feedback</FeedbackButton>
-      Venkat sai ram
     </nav>
   );
 }
