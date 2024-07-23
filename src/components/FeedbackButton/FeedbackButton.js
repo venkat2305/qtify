@@ -11,7 +11,7 @@ export default function FeedbackButton({ children }) {
             <Button
                 variant="contained"
                 className={styles.feedbackButton}
-                // sx={{backgroundColor: "#FFD700", color: "#000000"}}
+                sx={{ textTransform: 'none' }}
             >
                 {children}
             </Button>

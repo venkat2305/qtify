@@ -11,26 +11,41 @@ import Section from './components/Section/Section';
 
 function App() {
 
-  // const [cardData, setCardData] = useState([])
+  const [albumData, setAlbumData] = useState([])
+  const [newAlbumData, setNewAlbumData] = useState([])
 
-  // const getCardData = async () => {
-  //   try {
-  //     const response = await axios.get("https://qtify-backend-labs.crio.do/albums/top")
-  //     setCardData(response.data)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
+  const getTopAlbums = async () => {
+      try {
+          const response = await axios.get("https://qtify-backend-labs.crio.do/albums/top")
+          setAlbumData(response.data)
+          console.log(response.data)
+      } catch (error) {
+          console.log(error)
+      }
+  }
 
-  // useEffect(() => {
-  //   getCardData()
-  // }, [])
+  const getNewAlbums = async () => {
+    try{
+      const response = await axios.get("https://qtify-backend-labs.crio.do/albums/new")
+      setNewAlbumData(response.data)
+      console.log(response.data)
+    
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+      getTopAlbums()
+      getNewAlbums()
+  }, [])
 
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <Section />
+      <Section title="Top Albums" cardData={albumData}/>
+      <Section title="New Albums" cardData={newAlbumData}/>
     </div>
   );
 }

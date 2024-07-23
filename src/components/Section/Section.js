@@ -4,25 +4,13 @@ import axios from 'axios';
 import Grid from '@mui/material/Grid';
 
 import Card from '../Card/Card';
+import Carousel from '../Carousel/Carousel'
+
 import styles from './Section.module.css';
 
-export default function Section() {
+export default function Section({title,cardData}) {
 
-    const [cardData, setCardData] = useState([])
-
-    const getTopAlbums = async () => {
-        try {
-            const response = await axios.get("https://qtify-backend-labs.crio.do/albums/top")
-            setCardData(response.data)
-            console.log(response.data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-    useEffect(() => {
-        getTopAlbums()
-    }, [])
+    const [Collapse, setCollapse] = useState(false)
 
     return (
         <div className={styles.section}>
@@ -30,18 +18,33 @@ export default function Section() {
                 <Typography
                     className={styles.sectionTitle}
                 >
-                    Top Albums
+                    {title}
                 </Typography>
-                <Button className={styles.collapseBtn}>Collapse</Button>
+                <Button
+                    className={styles.collapseBtn}
+                    onClick={() => setCollapse(!Collapse)}
+                    sx={{ textTransform: 'none' }}
+                >
+                    {Collapse ? "Collapse" : "Show All"}
+                </Button>
             </div>
 
-            <Grid container spacing={4}>
-                {cardData.map((data) => (
-                    <Grid item xs={12} sm={6} md={2} lg={2} key={data.id}>
-                        <Card title={data.title} image={data.image} follows={data.follows} />
-                    </Grid>
-                ))}
-            </Grid>
+            {Collapse ? (
+                <Grid container spacing={4}>
+                    {cardData.map((data) => (
+                        <Grid item xs={12} sm={6} md={2} lg={2} key={data.id}>
+                            <Card title={data.title} image={data.image} follows={data.follows} />
+                        </Grid>
+                    ))}
+                </Grid>
+            ) : (
+                <div>
+                    <Carousel albumData={cardData} />
+                </div>
+
+            )}
+
+
         </div>
     )
 }
