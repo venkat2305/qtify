@@ -9,8 +9,11 @@ import Search from "../Search/Search";
 function Navbar({ searchData }) {
   return (
     <nav className={styles.navbar}>
-      {/* <Link to="/"> */}
+      <div className={styles["logo-container"]}>
         <Logo />
+      </div>
+      {/* <Link to="/"> */}
+      {/* <Logo /> */}
       {/* </Link> */}
       <Search
         placeholder="Search a song of your choice"
