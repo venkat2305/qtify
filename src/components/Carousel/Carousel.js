@@ -22,12 +22,14 @@ export default function Carousel({ albumData }) {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             }}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
         >
             {albumData.map((data) => (
                 <SwiperSlide style={{ color: "white" }}>
-                    <Card title={data.title} image={data.image} follows={data.follows} />
+                    <Card title={data.title} image={data.image} follows={data.follows} 
+                    {...data}
+                    />
                 </SwiperSlide>
             ))}
 

@@ -1,8 +1,9 @@
 import styles from "./Card.module.css";
 import { Typography, Chip } from '@mui/material';
 import dummyImage from "./dummy.png";
-
-export default function Card({ title, image, follows }) {
+// 
+export default function Card({ title, image, follows , likes }) {
+    const chipLabel = follows ? `${follows} follows` : `${likes} likes`
     return (
         <div className={styles.cardContainer}>
             <div className={styles.card}>
@@ -11,7 +12,7 @@ export default function Card({ title, image, follows }) {
                 className={styles.chipContainer}
                 >
                     <Chip
-                        label={`${follows} follows`}
+                        label={chipLabel}
                         className={styles.followersCount}
                     />
                 </div>

@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Grid from '@mui/material/Grid';
 import Section from './components/Section/Section';
+import Songs from './components/Songs/Songs';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       try {
           const response = await axios.get("https://qtify-backend-labs.crio.do/albums/top")
           setAlbumData(response.data)
-          console.log(response.data)
+          // console.log(response.data)
       } catch (error) {
           console.log(error)
       }
@@ -28,7 +29,7 @@ function App() {
     try{
       const response = await axios.get("https://qtify-backend-labs.crio.do/albums/new")
       setNewAlbumData(response.data)
-      console.log(response.data)
+      // console.log(response.data)
     
     } catch (error) {
       console.log(error)
@@ -46,6 +47,7 @@ function App() {
       <Hero />
       <Section title="Top Albums" cardData={albumData}/>
       <Section title="New Albums" cardData={newAlbumData}/>
+      <Songs />
     </div>
   );
 }
