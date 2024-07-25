@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/qtify/static/css/main.37c0f7ba.css",
+    "main.js": "/qtify/static/js/main.23db9027.js",
+    "static/js/453.444b85db.chunk.js": "/qtify/static/js/453.444b85db.chunk.js",
+    "static/media/dummy.png": "/qtify/static/media/dummy.57233a7c928012921fa5.png",
+    "static/media/hero_headphones.png": "/qtify/static/media/hero_headphones.00a85d8559875b3d75b0.png",
+    "static/media/poppins-latin-400-normal.woff": "/qtify/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/poppins-latin-400-normal.woff2": "/qtify/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/qtify/static/media/poppins-latin-ext-400-normal.cf7e1ed83eb19f7b1ea6.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/qtify/static/media/poppins-latin-ext-400-normal.6f94f40f848d79872444.woff2",
+    "static/media/right-arrow.svg": "/qtify/static/media/right-arrow.a6df7267b849a9614cec8af502c31473.svg",
+    "static/media/left-arrow.svg": "/qtify/static/media/left-arrow.5781bceed04d06d298a7762c22c64a5d.svg",
+    "index.html": "/qtify/index.html",
+    "main.37c0f7ba.css.map": "/qtify/static/css/main.37c0f7ba.css.map",
+    "main.23db9027.js.map": "/qtify/static/js/main.23db9027.js.map",
+    "453.444b85db.chunk.js.map": "/qtify/static/js/453.444b85db.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37c0f7ba.css",
+    "static/js/main.23db9027.js"
+  ]
+}
